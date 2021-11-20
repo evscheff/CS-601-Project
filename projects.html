@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>
+        My Work
+    </title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <b>Projects</b>
+            <a href="sample.html">Sample</a>
+            <a href="contact.html" id="contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introduces that this is a page with some examples of projects I've undertaken -->
+        <section id="ProjectsIntro">
+            <h1>Projects</h1>
+            <p>
+                Talk is easy, but results are hard. I have included some of my favorite projects below so you know that
+                I'm
+                more
+                than just words.
+            </p>
+        </section>
+
+        <figure id="BusinessReporting">
+            <img src="Photos/business_reporting.avif" alt="person looking at business-related data on a computer"
+                width="618" height="448">
+            <figcaption>Photo credit: Isaac Smith via <a
+                    href="https://images.unsplash.com/photo-1543286386-2e659306cd6c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80">Unsplash</a>
+            </figcaption>
+        </figure>
+
+        <!-- First project is Market Data Model -->
+        <section id="MarketDataModel" class="GreyBlock">
+            <h2>Historic Data Reporting System</h2>
+
+            <h3 class="par">Problem</h3>
+            <p>
+                One organization did not have any consolidated historic reporting relating to key business processes:
+                orders, sales, and shipments. Each lived in a different system, each system being managed by a various
+                contract 3rd party service
+                provider.
+            </p>
+            <p>Each query that involved comparisons between the different processes caused hours of overhead
+                while employees had to submit report requests into various systems and wait for the data to generate.
+            </p>
+            <p>Each
+                provider had different categorization and data retention practices, so after report generation employes
+                had
+                to spend even
+                more time manually tying everything together, and sometimes couldn't even obtain the historic data they
+                required. </p>
+            <h3 class="par">Approach</h3>
+            <p>
+                To tie everything together, first I had the need to create consistent product and customer hierarchies.
+                Then, I had to extract the transaction data, extract & normalize, and load into our own solution.
+                Employees
+                were then able to maintain the new system on an ongoing basis and add new data as available.
+            </p>
+            <h3 class="par">Result</h3>
+            <p>
+                The query process improved from an hour(s)-long effort into a second(s)-long effort, freeing up
+                employees to
+                spend time on more productive tasks. In addition, having consolidated dimensional hierarchies allowed us
+                to
+                add more business processes into reporting scope at later dates:
+            </p>
+            <ul>
+                <li>current inventory</li>
+                <li>historic inventory</li>
+                <li>order detail</li>
+                <li>demand plan</li>
+                <li>production history</li>
+                <li>budget</li>
+            </ul>
+        </section>
+
+        <figure id="WhInventory">
+            <img src="Photos/warehouse_inventory.avif"
+                alt="Scene in a warehouse with boxes of inventory stacked on shelves and a forklift in the foreground"
+                width="618" height="412">
+            <figcaption>Photo credit: Petrebels via <a
+                    href="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80">Unsplash</a>
+            </figcaption>
+        </figure>
+
+        <!-- Second project is the MRP tracking system -->
+        <section id="MrpSystem" class="BlueBlock">
+            <h2>An Inventory Tracking System</h2>
+            <h3 class="par">Problem</h3>
+            <p>One consumer packaged goods company tracked hundreds of individual SKUs in individual SKU-specific Excel
+                files.
+                Employees spent thousands of hours annually updating individual files and no consolidation existed to do
+                any
+                ad-hoc reporting on
+                expected production needs.
+            </p>
+
+            <p>Any time a new customer launched, existing customer left, or any product changes
+                happened, employees would have to update dozens of files and provide manual summaries.
+            </p>
+
+            <h3 class="par">Approach</h3>
+            <p>
+                The project involved creating a consolidated system using Materials Resource Planning (MRP) logic, so
+                that
+                one plan could exist in one place.
+            </p>
+            <p>
+                The employees intended to use this tool were not database users, so we chose to use
+                Microsoft Power BI as a self-service BI solution to bridge the gap between the use cases of Microsoft
+                Excel
+                and
+                a true database system.
+            </p>
+            <h3 class="par">Result</h3>
+            <p>
+                I created a consolidated system using information from these sources and applied Materials Resource
+                Planning
+                logic to create reorder and transfer recommendations. We went from having hundreds of files to analyze
+                and
+                report, to having one input per business process (current inventory, demand plan, outstanding
+                production,
+                etc.)
+                and one tool for reporting.
+            </p>
+
+            <p>
+                For reporting, we went from each SKU-level file being its own report to having one consolidated
+                reporting
+                source that fed into two outputs: a dashboard and an OLAP report that Excel could connect to via a
+                traditional PivotTable.
+            </p>
+        </section>
+
+
+        <figure id="EmptyShelves">
+            <img src="Photos/empty_shelves.avif" alt="Empty grocery store shelves" width="618" height="412">
+            <figcaption>Photo credit: Mick Haupt via <a
+                    href="https://images.unsplash.com/photo-1584568694778-54df24a3a7df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80">Unsplash</a>
+            </figcaption>
+        </figure>
+
+        <!-- final project is a safety stock system -->
+        <section id="SafetyStockSystem" class="GreyBlock">
+            <h2>Statistical Safety Stock Calculator</h2>
+            <h3 class="par">Problem</h3>
+            <p>
+                Another project dealt with the frequent occurrence of stockouts. The company in question held some level
+                of
+                safety stock, but the levels were decided based on feelings and a "finger in the wind" method.
+            </p>
+
+            <p>With variability in both demand and leadtimes that could not be consistently forecasted, the status quo
+                was
+                not working. </p>
+            <p>The
+                company faced high stockout costs but the inventory had a short shelf-life and products were frequently
+                replaced with newer versions. Because of these factors, we needed to optimize
+                considering the risks of both stocking out and excess inventory.</p>
+            <h3 class="par">Approach</h3>
+            <p>I worked with multiple teams to build a pipeline to capture and calculate profiles of
+                production leadtime and customer demand,
+                as well as the costs implicated with understocking and overstocking. </p>
+            <h3 class="par">Result</h3>
+            <p>After building this tool we were
+                ultimately able to set a responsive stocking strategy, decreasing stockouts by 70% without
+                leading to increased scrap costs from overages.
+            </p>
+            <section id="SsBonus">
+                <h3 class=par>Bonus!</h3>
+                <p>For a great overview on how I think about safety stock planning, check out <a
+                        href="http://web.mit.edu/2.810/www/files/readings/King_SafetyStock.pdf">this whitepaper</a> by
+                    Peter
+                    L.
+                    King in the APICS magainze and <a href="https://www.youtube.com/embed/h6uO1mwgOrI">this
+                        video</a>
+                    from
+                    Lokad.</p>
+                <iframe src="https://www.youtube.com/embed/h6uO1mwgOrI" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p>Also, be sure to check out my <a href="sample.html">work sample</a> on safety stocks!</p>
+            </section>
+
+        </section>
+        <!-- bonus content at the end: refernces to white paper and industry knowledge on safety stocks. establishes that I take time to do the research -->
+        <aside>
+
+            <p>If you need help with your supply chain, data, or analytics problems, <a href="contact.html">contact me
+                    now</a>!</p>
+        </aside>
+
+
+    </main>
+    <footer>
+        &copy;2021 Ed Scheff
+    </footer>
+</body>
+
+</html>

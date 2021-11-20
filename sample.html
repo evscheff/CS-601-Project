@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>
+        Work Sample
+    </title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <b>Sample</b>
+            <a href="contact.html" id="contact">Contact</a>
+
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introduces that this is a page with a more tangible work sample -->
+        <section id="SampleIntro">
+            <h1>Safety Stock Sample</h1>
+            <p>
+                Sure you've seen my project samples, but you want to see a little more. I can't blame you! Here's a
+                taste of what I can help bring to the table.</p>
+            <section class="GreyBlock">
+                <h2>Sample Inputs</h2>
+                <p>In this example, I'll show what a safety stock might look
+                    like for one product in a local retailer. You'll see the inputs and the output, then I'll discuss
+                    other
+                    considerations to keep in mind.
+                </p>
+                <table>
+                    <caption>Demand Statistics</caption>
+                    <thead>
+                        <tr>
+                            <th>Measurement</th>
+                            <th>Quantity</th>
+                            <th>Unit of Measurement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Average Demand</td>
+                            <td>500</td>
+                            <td>units/week</td>
+                        </tr>
+                        <tr>
+                            <td>Standard Deviation of Demand</td>
+                            <td>100</td>
+                            <td>units/week</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table>
+                    <caption>Leadtime* Statistics</caption>
+                    <thead>
+                        <tr>
+                            <th>Measurement</th>
+                            <th>Quantity</th>
+                            <th>Unit of Measurement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Average Order Leadtime</td>
+                            <td>8</td>
+                            <td>days</td>
+                        </tr>
+                        <tr>
+                            <td>Standard Deviation of Order Leadtime</td>
+                            <td>0.5</td>
+                            <td>days</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>*Note that the order leadtime in calculations is <i>your</i> leadtime: i.e. once <i>you</i> place an
+                    order, how much time does it take for <i>you</i> to receive?</p>
+            </section>
+            <section class="BlueBlock">
+                <h2>Sample Results</h2>
+                <p>Let's also assume that your desired service level is 85%. How much safety stock do you need to
+                    maintain
+                    to ensure you fulfill 85% of all of your customers' orders? Drumroll, please!</p>
+                <p>Assuming demand and leadtimes stay near current levels, a safety stock of 117 units
+                    should be
+                    maintained
+                    to achieve an 85% service level. What does this mean? On top of the 500 units you expect to sell,
+                    you should make sure you have another 117 on hand to account for extreme scenarios.
+                    <br><br>According to
+                    this
+                    calculation, with this level of safety stock you
+                    should only see a combination of
+                    high demand and/or long leadtimes to such a high level that demand exceeds supply in 15% of cases
+                    (roughly 55 days of the year).
+                </p>
+            </section>
+            <section class="GreyBlock">
+                <h2>Hold on a Minute</h2>
+                <p><b>You (probably):</b> <br>OK, that's great. But how do I select a service level? 85% seems kind of
+                    low.
+                    How
+                    should I handle situations where my demand and/or leadtimes are increasing or decreasing? What if I
+                    don't even have this data?</p>
+
+                <p><b>Me:</b><br> Great questions! Applying the formula is the easy part. As for the rest, there's no
+                    one-size answer, and it's as much an art as it is a science.
+                    The hard part is in understanding your unique situation: capturing and cleaning the data;
+                    understanding
+                    the economics and cost structure of your inventory (is it perishable? what's the economic cost of a
+                    lost sale versus scrapping inventory?); and that
+                    takes experience & judgement.
+                </p>
+            </section>
+
+            <aside>
+                <p>That's exactly why I'm here: to help walk you through the subjectivity. Together we'll create the
+                    perfect solution tailor-made to your business.</p>
+                <p>So don't delay: <a href="contact.html">Contact me now</a> to create a custom-made safety stock
+                    strategy!</p>
+            </aside>
+
+        </section>
+
+
+
+    </main>
+    <footer>
+        &copy;2021 Ed Scheff
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+/* Set Fonts */
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p, ul, nav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Set Font Sizes */
+h1 {
+    font-size: 2.7rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+body {
+    margin: 0px 0px 0px 0px;
+}
+header {
+    background-color: #739e6f;
+    margin: 0px;
+}
+
+/* Style Nav */
+nav {
+    display: flex;
+    justify-content:space-evenly;
+    padding: 1.7rem;
+}
+nav > * {
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+nav > b {
+    color: white;
+}
+
+a {
+    color: #023047;
+}
+
+/* Stye Body */
+main {
+    padding: 0px 20px 0px 20px;
+    margin: 0px 50px 0px 50px;
+}
+
+/* Main Templates for Standard Blocks */
+.GreyBlock {
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 0px 15px 0px 15px;
+        margin: 15px 0px 15px 0px;
+        background-color: #eeeeee;
+}
+
+.BlueBlock {
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 0px 15px 0px 15px;
+        margin: 15px 0px 15px 0px;
+        background-color: #023047;
+        color: white;
+        font-weight: lighter;
+}
+
+.BlueBlock > p > a {
+    color: #C5B783;
+}
+
+.GreyBlock > p > a, aside > a {
+    color: #023047;
+}
+
+.GreyBlock > figure, .BlueBlock > figure {
+    max-width: 35%;
+}
+
+/* Image Styling */
+figure > img {
+    max-width: 100%;
+    height: auto;
+}
+
+#BrokenChain {
+    float: left;
+    max-width: 12%;
+}
+
+#Collaboration {
+   float: right;
+    max-width: 20%;
+}
+
+#WhInventory, #BusinessReporting {
+    float: left;
+    max-width: 35%;
+}
+
+#WhInventory > figcaption {
+    color: white;
+    font-weight: lighter;
+}
+
+#WhInventory > figcaption > a {
+    color: #C5B783;
+}
+
+#EmptyShelves, #BusinessReporting {
+    float: right;
+    max-width: 35%;
+}
+
+#EdHeadshot {
+    max-width: 20%;
+}
+
+#EdClimbing {
+    float:right;
+    max-width: 22%;
+}
+
+#MyBackground {
+    max-width: 70%;
+}
+
+#MoreInfo {
+    max-width: 70%;
+}
+
+
+#BrokenChain > img , #Collaboration > img {
+    max-width: 100%;
+}
+
+/* Table Styling */
+table, th, td, caption {
+    border: 1px solid #3d405b;
+    border-collapse: collapse;
+    padding: 0px 10px 0px 10px;
+}
+
+#MySkillsTable {
+    max-width: 100%;
+}
+
+.NoBullet {
+    list-style-type: none;
+}
+
+
+iframe {
+    max-width:fit-content;
+    height: auto;
+}
+
+footer {
+    background-color: #739e6f;
+    padding: 5px 0px 5px 20px;
+}
+
+aside {
+    background-color: #C5B783;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 0px 15px 10px 15px;
+    margin: 15px 25% 15px 25%;
+    max-width: fit-content;
+    vertical-align: center;
+}
+
+
+/* Styling for Small Screens */
+@media (max-width: 640px) {
+    nav {
+    padding: 0.5rem;
+    }
+
+    nav > * {
+        font-size: 1rem;
+    }
+
+    figure {
+        display: none;
+    }
+
+    .GreyBlock > .par {
+        border-bottom: 1px dotted black;
+    }
+    .BlueBlock > .par {
+        border-bottom: 1px dotted white;
+    }
+
+
+    main {
+        margin: 0px 0px 0px 0px;
+    }
+
+        h1 {
+    font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+    iframe {
+        display:none;
+    }
+
+}
+
+@media (min-width: 640px) {
+    #SkillsList{
+        display: none;
+    }
+}
+
+/* Styling for Medium Screens */
+@media (min-width: 640px) and (max-width: 900px) {
+    nav {
+        padding: 1rem;
+    }
+
+    nav > * {
+        font-size: 1.5rem;
+    }
+
+
+    main {
+        margin: 0px 20px 0px 20px;
+    }
+
+    h1 {
+    font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+    nav > * {
+     font-size: 1.2rem;
+    }
+    nav {
+        padding: 1rem;
+    }
+
+    @media print {
+        *, header > nav {
+            background-color: transparent;
+        }
+        iframe, figure, aside, nav, #SsBonus, #ContactPage {
+            display: none;
+        } 
+
+        #SkillsList {
+            display:block;
+        }
+
+        main {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .BlueBlock, .GreyBlock {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 1px solid black;
+            border-radius: 0px;
+        }
+
+    }
+
+}
