@@ -28,97 +28,88 @@
     <main>
         <!-- Introduces that this is a page with a more tangible work sample -->
         <section id="SampleIntro">
-            <h1>Safety Stock Sample</h1>
+            <h1>Safety Stock Calculator Sample</h1>
             <p>
                 Sure you've seen my project samples, but you want to see a little more. I can't blame you! Here's a
                 taste of what I can help bring to the table.</p>
             <section class="GreyBlock">
-                <h2>Sample Inputs</h2>
-                <p>In this example, I'll show what a safety stock might look
-                    like for one product in a local retailer. You'll see the inputs and the output, then I'll discuss
-                    other
-                    considerations to keep in mind.
+                <h2>Safety Stock Calculator</h2>
+                <p>In this example, I'll show a safety stock calculator for a single product. I'll start with
+                    default values for each
+                    field, but you can use your own inputs and see how the safety stock changes. Below is a summary of
+                    what each of the inputs means:
                 </p>
-                <table>
-                    <caption>Demand Statistics</caption>
-                    <thead>
-                        <tr>
-                            <th>Measurement</th>
-                            <th>Quantity</th>
-                            <th>Unit of Measurement</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Average Demand</td>
-                            <td>500</td>
-                            <td>units/week</td>
-                        </tr>
-                        <tr>
-                            <td>Standard Deviation of Demand</td>
-                            <td>100</td>
-                            <td>units/week</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br>
-                <table>
-                    <caption>Leadtime* Statistics</caption>
-                    <thead>
-                        <tr>
-                            <th>Measurement</th>
-                            <th>Quantity</th>
-                            <th>Unit of Measurement</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Average Order Leadtime</td>
-                            <td>8</td>
-                            <td>days</td>
-                        </tr>
-                        <tr>
-                            <td>Standard Deviation of Order Leadtime</td>
-                            <td>0.5</td>
-                            <td>days</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>*Note that the order leadtime in calculations is <i>your</i> leadtime: i.e. once <i>you</i> place an
-                    order, how much time does it take for <i>you</i> to receive?</p>
+                <ul>
+                    <li>Average demand: your customers' demand on a weekly basis</li>
+                    <li>StDev demand: standard deviation of your customers' demand on a weekly basis</li>
+                    <li>Average Leadtime Days: average leadtime from the day you place an order to the day it arrives,
+                        in days</li>
+                    <li>StDev Leadtime Days: standard deviation of leadtime from the day you place an order to the day
+                        it arrives, in days</li>
+                    <li>Your Cost/Unit: your cost to buy each unit of inventory</li>
+                    <li>Service Level: what percentage of your customers' orders you would like to fulfill</li>
+                </ul>
+                <form>
+                    <label for="averageDemand">Average Demand:</label>
+                    <input type="number" id="averageDemand" name="averageDemand" value="500" onchange="val()">
+                    <br>
+                    <label for="stDevDemand">StDev Weekly Demand:</label>
+                    <input type="number" id="stDevDemand" name="stDevDemand" value="100" onchange="val()">
+                    <br>
+                    <label for="averageLeadtime">Average Leadtime Days</label>
+                    <input type="number" id="averageLeadtime" name="averageLeadtime" value="8" onchange="val()">
+                    <br>
+                    <label for="stDevLeadtime">StDev Leadtime Days:</label>
+                    <input type="number" id="stDevLeadtime" name="stDevLeadtime" value="2" onchange="val()">
+                    <br>
+                    <label for="unitCost">Your Cost/Unit ($):</label>
+                    <input type="number" id="unitCost" name="unitCost" value="5" onchange="val()">
+                    <br>
+                    <label for="serviceLevels">Choose your desired service level:</label>
+                    <select name="serviceLevels" id="serviceLevels" value="90%" onchange="val()">
+                        <option value="80%">80%</option>
+                        <option value="85%">85%</option>
+                        <option value="90%">90%</option>
+                        <option value="95%">95%</option>
+                        <option value="96%">96%</option>
+                        <option value="97%">97%</option>
+                        <option value="98%">98%</option>
+                        <option value="99%">99%</option>
+                        <option value="99.9%">99.9%</option>
+                        <option value="99.99%">99.99%</option>
+                    </select>
+                    <br>
+                </form>
             </section>
             <section class="BlueBlock">
-                <h2>Sample Results</h2>
-                <p>Let's also assume that your desired service level is 85%. How much safety stock do you need to
-                    maintain
-                    to ensure you fulfill 85% of all of your customers' orders? Drumroll, please!</p>
-                <p>Assuming demand and leadtimes stay near current levels, a safety stock of 117 units
+                <h2>Calculator Results</h2>
+                <p>Assuming demand and leadtime don't change drastically in scale or variation, a safety stock of <span
+                        id="safetyStockUnits"></span> units
                     should be
                     maintained
-                    to achieve an 85% service level. What does this mean? On top of the 500 units you expect to sell,
-                    you should make sure you have another 117 on hand to account for extreme scenarios.
-                    <br><br>According to
-                    this
-                    calculation, with this level of safety stock you
-                    should only see a combination of
-                    high demand and/or long leadtimes to such a high level that demand exceeds supply in 15% of cases
-                    (roughly 55 days of the year).
+                    to achieve your desired service level.
+                    <br><br>Based on your unit cost, this inventory will come at a cost of $<span
+                        id="safetyStockCost"></span>.
                 </p>
             </section>
             <section class="GreyBlock">
                 <h2>Hold on a Minute</h2>
-                <p><b>You (probably):</b> <br>OK, that's great. But how do I select a service level? 85% seems kind of
-                    low.
+                <p><b>You (probably):</b> <br>OK, that's great. But how do I select a service level? What if I have a
+                    seasonal business?
                     How
                     should I handle situations where my demand and/or leadtimes are increasing or decreasing? What if I
-                    don't even have this data?</p>
+                    have many products to plan for? What if I
+                    don't even have this data?!</p>
 
-                <p><b>Me:</b><br> Great questions! Applying the formula is the easy part. As for the rest, there's no
-                    one-size answer, and it's as much an art as it is a science.
-                    The hard part is in understanding your unique situation: capturing and cleaning the data;
+                <p><b>Me:</b><br> Great questions! Applying the formula to one product is the easy part. As for the
+                    rest, there's no
+                    one-size answer, and it's as much an art as it is a science.<br><br>
+                    The hard part is in understanding your unique situation: building a pipeline to capture, clean, and
+                    store the data;
                     understanding
                     the economics and cost structure of your inventory (is it perishable? what's the economic cost of a
-                    lost sale versus scrapping inventory?); and that
+                    lost sale versus scrapping inventory?). <br><br>
+                    That
                     takes experience & judgement.
                 </p>
             </section>
@@ -127,7 +118,7 @@
                 <p>That's exactly why I'm here: to help walk you through the subjectivity. Together we'll create the
                     perfect solution tailor-made to your business.</p>
                 <p>So don't delay: <a href="contact.html">Contact me now</a> to create a custom-made safety stock
-                    strategy!</p>
+                    data pipeline and strategy!</p>
             </aside>
 
         </section>
@@ -138,6 +129,7 @@
     <footer>
         &copy;2021 Ed Scheff
     </footer>
+    <script src="JS/safetyStock.js"></script>
 </body>
 
 </html>

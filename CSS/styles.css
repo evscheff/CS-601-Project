@@ -3,7 +3,7 @@ h1, h2, h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-p, ul, nav {
+p, ul, nav, form {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -21,6 +21,10 @@ h3 {
 }
 
 p {
+    font-size: 1rem;
+}
+
+form {
     font-size: 1rem;
 }
 
@@ -159,6 +163,17 @@ table, th, td, caption {
 
 .NoBullet {
     list-style-type: none;
+}
+
+#safetyStockUnits, #safetyStockCost {
+    font-weight:bold;
+    color: #C5B783;
+    text-decoration: underline;
+}
+
+form {
+    padding-bottom: 15px;
+    padding-left: 15px;
 }
 
 

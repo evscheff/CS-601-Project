@@ -50,12 +50,15 @@ function calculateSafetyStockUnits() {
                 +
                 (Math.pow(((stDevLeadtime / 7) * avgDemand), 2))))
 
-    document.getElementById("output1").innerHTML = `You will want to carry ${safetyStockCalculation} units of safety stock`;
+    //document.getElementById("output1").innerHTML = `You will want to carry ${safetyStockCalculation} units of safety stock`;
+    document.getElementById("safetyStockUnits").innerHTML = `${safetyStockCalculation}`
     calculateSafetyStockCost(safetyStockCalculation);
 }
 
 function calculateSafetyStockCost(safetyStockCalculation) {
     var safetyStockCost = cost * safetyStockCalculation;
-    document.getElementById("output2").innerHTML = `This will come at an inventory cost of $${safetyStockCost}`;
+    //document.getElementById("output2").innerHTML = `This will come at an inventory cost of $${safetyStockCost}`;
+    document.getElementById("safetyStockCost").innerHTML = `${safetyStockCost}`
+
 
 }
