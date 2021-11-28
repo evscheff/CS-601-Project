@@ -3,7 +3,7 @@ h1, h2, h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-p, ul, nav, form {
+p, ul, nav, form, button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -171,9 +171,64 @@ table, th, td, caption {
     text-decoration: underline;
 }
 
+#ssCalc {
+    border: 2px dashed #023047;
+    border-radius: 15px;
+    padding: 10px;
+    width: fit-content;
+    margin-bottom: 15px;
+    background-color: #C5B783;
+}
+
+#ssCalcSect {
+    display: flex;
+    justify-content: center;
+}
+
+#ssResetButtonSect {
+    justify-content: center;
+}
+
+#ssResetButton {
+    background-color: #023047;
+    color: white;
+    font-weight: lighter;
+    font-size: 1.3rem;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;;
+    margin-top: 10px;
+}
+
 form {
     padding-bottom: 15px;
     padding-left: 15px;
+}
+
+.formEntry {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 0px 2px 0px;
+}
+
+#contactButton {
+    background-color: #739e6f;
+    border: 4px solid #C5B783;
+    border-radius: 30px;
+    color: #C5B783;
+    font-weight: bolder;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer;
+}
+
+#contactButtonOnPage {
+    background-color: #739e6f;
+    border: 4px solid white;
+    border-radius: 30px;
+    color: white;
+    font-weight: bolder;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer;
 }
 
 

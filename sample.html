@@ -19,7 +19,8 @@
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <b>Sample</b>
-            <a href="contact.html" id="contact">Contact</a>
+            <!-- <a href="contact.html" id="contact">Contact</a> -->
+            <button id="contactButton" type="button" onclick="document.location.href='contact.html'">Contact</button>
 
 
         </nav>
@@ -34,9 +35,12 @@
                 taste of what I can help bring to the table.</p>
             <section class="GreyBlock">
                 <h2>Safety Stock Calculator</h2>
-                <p>In this example, I'll show a safety stock calculator for a single product. I'll start with
+                <p>In this example, I'll show a safety stock calculator for a single product. I'll
+                    start with
                     default values for each
-                    field, but you can use your own inputs and see how the safety stock changes. Below is a summary of
+                    field, but you can use your own inputs and see how the safety stock changes. This is phrase is in
+                    retail terms, but this could also work if you are a manufacturer. Just change the purchase-focused
+                    language with production-focused phrasing.<br><br>Below is a summary of
                     what each of the inputs means:
                 </p>
                 <ul>
@@ -49,77 +53,96 @@
                     <li>Your Cost/Unit: your cost to buy each unit of inventory</li>
                     <li>Service Level: what percentage of your customers' orders you would like to fulfill</li>
                 </ul>
-                <form>
-                    <label for="averageDemand">Average Demand:</label>
-                    <input type="number" id="averageDemand" name="averageDemand" value="500" onchange="val()">
-                    <br>
-                    <label for="stDevDemand">StDev Weekly Demand:</label>
-                    <input type="number" id="stDevDemand" name="stDevDemand" value="100" onchange="val()">
-                    <br>
-                    <label for="averageLeadtime">Average Leadtime Days</label>
-                    <input type="number" id="averageLeadtime" name="averageLeadtime" value="8" onchange="val()">
-                    <br>
-                    <label for="stDevLeadtime">StDev Leadtime Days:</label>
-                    <input type="number" id="stDevLeadtime" name="stDevLeadtime" value="2" onchange="val()">
-                    <br>
-                    <label for="unitCost">Your Cost/Unit ($):</label>
-                    <input type="number" id="unitCost" name="unitCost" value="5" onchange="val()">
-                    <br>
-                    <label for="serviceLevels">Choose your desired service level:</label>
-                    <select name="serviceLevels" id="serviceLevels" value="90%" onchange="val()">
-                        <option value="80%">80%</option>
-                        <option value="85%">85%</option>
-                        <option value="90%">90%</option>
-                        <option value="95%">95%</option>
-                        <option value="96%">96%</option>
-                        <option value="97%">97%</option>
-                        <option value="98%">98%</option>
-                        <option value="99%">99%</option>
-                        <option value="99.9%">99.9%</option>
-                        <option value="99.99%">99.99%</option>
-                    </select>
-                    <br>
-                </form>
+                <p> Please note: only positive whole
+                    numbers are allowed. Decimals and negatives will be dropped from calculations.</p>
+                <div id="ssCalcSect">
+                    <form id="ssCalc">
+                        <div class="formEntry">
+                            <label for="averageDemand">Average Demand:&emsp;</label>
+                            <input type="number" id="averageDemand" name="averageDemand" value="500" onchange="val()"
+                                required min="0">
+                        </div>
+                        <div class="formEntry">
+                            <label for="stDevDemand">StDev Weekly Demand:&emsp;</label>
+                            <input type="number" id="stDevDemand" name="stDevDemand" value="100" onchange="val()"
+                                required min="0">
+                        </div>
+                        <div class="formEntry">
+                            <label for="averageLeadtime">Average Leadtime Days:&emsp;</label>
+                            <input type="number" id="averageLeadtime" name="averageLeadtime" value="8" onchange="val()"
+                                required min="0">
+                        </div>
+                        <div class="formEntry">
+                            <label for="stDevLeadtime">StDev Leadtime Days:&emsp;</label>
+                            <input type="number" id="stDevLeadtime" name="stDevLeadtime" value="2" onchange="val()"
+                                required min="0">
+                        </div>
+                        <div class="formEntry">
+                            <label for="unitCost">Your Cost/Unit ($):&emsp;</label>
+                            <input type="number" id="unitCost" name="unitCost" value="5" onchange="val()" required
+                                min="0">
+                        </div>
+                        <div class="formEntry">
+                            <label for="serviceLevels">Desired service level:&emsp;</label>
+                            <select name="serviceLevels" id="serviceLevels" onchange="val()">
+                                <option value="80%">80%</option>
+                                <option value="85%">85%</option>
+                                <option value="90%">90%</option>
+                                <option value="95%">95%</option>
+                                <option value="96%">96%</option>
+                                <option value="97%">97%</option>
+                                <option value="98%">98%</option>
+                                <option value="99%">99%</option>
+                                <option value="99.9%">99.9%</option>
+                                <option value="99.99%">99.99%</option>
+                                <option value="99.999%">99.999%</option>
+                                <option value="99.9999%">99.9999%</option>
+                            </select>
+                        </div>
+                        <div class="formEntry" id="ssResetButtonSect"><button onClick="reset()" id="ssResetButton">Reset
+                                to
+                                Defaults</button>
+                        </div>
+                    </form>
             </section>
-            <section class="BlueBlock">
-                <h2>Calculator Results</h2>
-                <p>Assuming demand and leadtime don't change drastically in scale or variation, a safety stock of <span
-                        id="safetyStockUnits"></span> units
-                    should be
-                    maintained
-                    to achieve your desired service level.
-                    <br><br>Based on your unit cost, this inventory will come at a cost of $<span
-                        id="safetyStockCost"></span>.
-                </p>
-            </section>
-            <section class="GreyBlock">
-                <h2>Hold on a Minute</h2>
-                <p><b>You (probably):</b> <br>OK, that's great. But how do I select a service level? What if I have a
-                    seasonal business?
-                    How
-                    should I handle situations where my demand and/or leadtimes are increasing or decreasing? What if I
-                    have many products to plan for? What if I
-                    don't even have this data?!</p>
+        </section>
+        <section class="BlueBlock">
+            <h2>Calculator Results</h2>
+            <p>Assuming demand and leadtime don't change drastically in scale or variation, a safety stock of <span
+                    id="safetyStockUnits"></span> units
+                should be
+                maintained
+                to achieve your desired service level.
+                <br><br>Based on your unit cost, this inventory will come at a cost of $<span
+                    id="safetyStockCost"></span>.
+            </p>
+        </section>
+        <section class="GreyBlock">
+            <h2>Hold on a Minute</h2>
+            <p><b>You (probably):</b> <br>OK, that's great. But how do I select a service level? What if I have a
+                seasonal business?
+                How
+                should I handle situations where my demand and/or leadtimes are increasing or decreasing? What if I
+                have many products to plan for? What if I
+                don't even have this data?!</p>
 
-                <p><b>Me:</b><br> Great questions! Applying the formula to one product is the easy part. As for the
-                    rest, there's no
-                    one-size answer, and it's as much an art as it is a science.<br><br>
-                    The hard part is in understanding your unique situation: building a pipeline to capture, clean, and
-                    store the data;
-                    understanding
-                    the economics and cost structure of your inventory (is it perishable? what's the economic cost of a
-                    lost sale versus scrapping inventory?). <br><br>
-                    That
-                    takes experience & judgement.
-                </p>
-            </section>
+            <p><b>Me:</b><br> Great questions! Applying the formula to one product is the easy part. As for the
+                rest, there's no
+                one-size answer, and it's as much an art as it is a science.<br><br>
+                The hard part is in understanding your unique situation: building a pipeline to capture, clean, and
+                store the data;
+                understanding
+                the economics and cost structure of your inventory (is it perishable? what's the economic cost of a
+                lost sale versus scrapping inventory?). And that takes experience and judgement. <br><br>
+            </p>
+        </section>
 
-            <aside>
-                <p>That's exactly why I'm here: to help walk you through the subjectivity. Together we'll create the
-                    perfect solution tailor-made to your business.</p>
-                <p>So don't delay: <a href="contact.html">Contact me now</a> to create a custom-made safety stock
-                    data pipeline and strategy!</p>
-            </aside>
+        <aside>
+            <p>That's exactly why I'm here: to help walk you through the subjectivity. Together we'll create the
+                perfect solution tailor-made to your business.</p>
+            <p>So don't delay: <a href="contact.html">Contact me now</a> to create a custom-made safety stock
+                data pipeline and strategy!</p>
+        </aside>
 
         </section>
 
@@ -127,7 +150,7 @@
 
     </main>
     <footer>
-        &copy;2021 Ed Scheff
+        &copy;2021 Ed
     </footer>
     <script src="JS/safetyStock.js"></script>
 </body>

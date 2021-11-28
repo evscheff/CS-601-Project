@@ -19,7 +19,9 @@ zScoreMap = new Map(
         ["98%", 2.05],
         ["99%", 2.33],
         ["99.9%", 3.09],
-        ["99.99%", 3.72]
+        ["99.99%", 3.72],
+        ["99.999%", 4.26],
+        ["99.9999%", 4.75]
     ]
 )
 
@@ -33,10 +35,9 @@ function val() {
     stDevDemand = parseInt(document.getElementById("stDevDemand").value);
     avgLeadtime = parseInt(document.getElementById("averageLeadtime").value);
     stDevLeadtime = parseInt(document.getElementById("stDevLeadtime").value);
-    stDevLeadtime = parseInt(document.getElementById("stDevLeadtime").value);
+    //stDevLeadtime = parseInt(document.getElementById("stDevLeadtime").value);
     cost = parseInt(document.getElementById("unitCost").value);
     calculateSafetyStockUnits();
-
 }
 
 function calculateSafetyStockUnits() {
@@ -48,17 +49,31 @@ function calculateSafetyStockUnits() {
                     *
                     (Math.pow(stDevDemand, 2)))
                 +
-                (Math.pow(((stDevLeadtime / 7) * avgDemand), 2))))
+                (Math.pow(((stDevLeadtime / 7) * avgDemand), 2))));
 
-    //document.getElementById("output1").innerHTML = `You will want to carry ${safetyStockCalculation} units of safety stock`;
-    document.getElementById("safetyStockUnits").innerHTML = `${safetyStockCalculation}`
-    calculateSafetyStockCost(safetyStockCalculation);
+    if (isNaN(safetyStockCalculation)) {
+        document.getElementById("safetyStockUnits").innerHTML = "calculator error: please ensure all fields have valid inputs";
+        document.getElementById("safetyStockUnits").style.color = "red";
+        document.getElementById("safetyStockCost").innerHTML = "calculator error: please ensure all fields have valid inputs";
+        document.getElementById("safetyStockCost").style.color = "red";
+    } else {
+        document.getElementById("safetyStockUnits").innerHTML = `${safetyStockCalculation}`;
+        document.getElementById("safetyStockUnits").style.color = "";
+        calculateSafetyStockCost(safetyStockCalculation);
+    }
 }
 
 function calculateSafetyStockCost(safetyStockCalculation) {
     var safetyStockCost = cost * safetyStockCalculation;
-    //document.getElementById("output2").innerHTML = `This will come at an inventory cost of $${safetyStockCost}`;
-    document.getElementById("safetyStockCost").innerHTML = `${safetyStockCost}`
+    document.getElementById("safetyStockCost").innerHTML = `${safetyStockCost}`;
+    document.getElementById("safetyStockCost").style.color = "";
+}
 
-
+function reset() {
+    document.getElementById("serviceLevels").reset();
+    document.getElementById("averageDemand").reset();
+    document.getElementById("stDevDemand").reset();
+    document.getElementById("averageLeadtime").reset();
+    document.getElementById("stDevLeadtime").reset();
+    document.getElementById("unitCost").reset();
 }
