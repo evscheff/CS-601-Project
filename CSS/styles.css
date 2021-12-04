@@ -81,7 +81,7 @@ main {
         font-weight: lighter;
 }
 
-.BlueBlock > p > a {
+.BlueBlock > p > a, .BlueBlock a {
     color: #C5B783;
 }
 
@@ -260,7 +260,7 @@ aside {
     }
 
     nav > * {
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
 
     figure {
@@ -334,6 +334,7 @@ aside {
     nav {
         padding: 1rem;
     }
+}
 
     @media print {
         *, header > nav {
@@ -361,5 +362,3 @@ aside {
         }
 
     }
-
-}

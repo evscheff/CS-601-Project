@@ -7,7 +7,7 @@ var avgLeadtime;
 var stDevLeadtime;
 var cost;
 
-
+// mapping of service levels to the statistical z-score
 zScoreMap = new Map(
     [
         ["80%", 0.84],
@@ -23,11 +23,13 @@ zScoreMap = new Map(
         ["99.999%", 4.26],
         ["99.9999%", 4.75]
     ]
-)
+);
 
-val();
+// run the calculator function upon page load, based on defaults
+calculate();
 
-function val() {
+// read the inputs and run the calculator
+function calculate() {
     serviceLevelInput = document.getElementById("serviceLevels");
     selectedServiceLevel = serviceLevelInput.options[serviceLevelInput.selectedIndex].text;
     zScoreCalculation = zScoreMap.get(selectedServiceLevel);
@@ -35,12 +37,12 @@ function val() {
     stDevDemand = parseInt(document.getElementById("stDevDemand").value);
     avgLeadtime = parseInt(document.getElementById("averageLeadtime").value);
     stDevLeadtime = parseInt(document.getElementById("stDevLeadtime").value);
-    //stDevLeadtime = parseInt(document.getElementById("stDevLeadtime").value);
     cost = parseInt(document.getElementById("unitCost").value);
     calculateSafetyStockUnits();
 }
 
 function calculateSafetyStockUnits() {
+    // safety stock formula
     var safetyStockCalculation =
         Math.ceil(
             zScoreCalculation *
@@ -51,6 +53,7 @@ function calculateSafetyStockUnits() {
                 +
                 (Math.pow(((stDevLeadtime / 7) * avgDemand), 2))));
 
+    // write outputs
     if (isNaN(safetyStockCalculation)) {
         document.getElementById("safetyStockUnits").innerHTML = "calculator error: please ensure all fields have valid inputs";
         document.getElementById("safetyStockUnits").style.color = "red";
@@ -63,12 +66,14 @@ function calculateSafetyStockUnits() {
     }
 }
 
+// calculate cost of safety stock
 function calculateSafetyStockCost(safetyStockCalculation) {
     var safetyStockCost = cost * safetyStockCalculation;
     document.getElementById("safetyStockCost").innerHTML = `${safetyStockCost}`;
     document.getElementById("safetyStockCost").style.color = "";
 }
 
+// rest the form to default values
 function reset() {
     document.getElementById("serviceLevels").reset();
     document.getElementById("averageDemand").reset();
