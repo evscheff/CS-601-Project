@@ -150,6 +150,10 @@ figure > img {
     max-width: 100%;
 }
 
+#description {
+    width:100%;
+}
+
 /* Table Styling */
 table, th, td, caption {
     border: 1px solid #3d405b;
@@ -171,7 +175,7 @@ table, th, td, caption {
     text-decoration: underline;
 }
 
-#ssCalc {
+#ssCalc, #ssCalc2 {
     border: 2px dashed #023047;
     border-radius: 15px;
     padding: 10px;
@@ -180,7 +184,12 @@ table, th, td, caption {
     background-color: #C5B783;
 }
 
-#ssCalcSect {
+#ssCalcSect, #ssCalcSect2 {
+    display: flex;
+    justify-content: center;
+}
+
+#contactSubmitButtonSect {
     display: flex;
     justify-content: center;
 }
@@ -189,7 +198,7 @@ table, th, td, caption {
     justify-content: center;
 }
 
-#ssResetButton {
+#ssResetButton, #contactSubmitButton {
     background-color: #023047;
     color: white;
     font-weight: lighter;

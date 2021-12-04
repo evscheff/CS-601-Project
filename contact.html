@@ -20,8 +20,9 @@
             <a href="sample.html">Sample</a>
             <a href="resources.html">Resources</a>
             <!-- <a href="contact.html" id="contact">Contact</a> -->
-            <button id="contactButtonOnPage" type="button"
-                onclick="document.location.href='contact.html'">Contact</button>
+            <!--<button id="contactButtonOnPage" type="button"
+                onclick="document.location.href='contact.html'">Contact</button>-->
+            <button id="contactButtonOnPage" type="button" onclick="goToContactPage()">Contact</button>
         </nav>
     </header>
 
@@ -29,24 +30,35 @@
         <!-- No other content at this time, call to action only -->
         <section id="ContactPageCallToAction">
             <h1>Solve Your Supply Chain Headaches Now</h1>
-            <aside>
-                <p>Interested in seeing how I can help you? <a href="mailto:evscheff@bu.edu">Send me an email</a> now!
-                </p>
-                <figure>
-                    <img src="Photos/typewriter_send_mail.jpeg"
-                        alt="photo of typewriter with message saying 'Send a Mail'" width="257" height="386">
-                    <figcaption>Photo credit: Markus Winkler via <a
-                            href="https://images.unsplash.com/photo-1586769852351-8791d2bb43be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80">Unsplash</a>
-                    </figcaption>
-                </figure>
-            </aside>
-
-
-        </section>
+            <section id="ssCalcSect2">
+                <form id="ssCalc2">
+                    <p>Interested in seeing how I can help you? <br><a href="mailto:evscheff@bu.edu">Send me an
+                            email</a> now or
+                        enter in your data below!
+                    </p>
+                    <div class="formEntry">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="formEntry">
+                        <label for="email">Your Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="formEntry">
+                        <label for="job">Your Job:</label>
+                        <input type="text" id="job" name="job" required>
+                    </div>
+                    <label for="description">How Can I Help You?</label>
+                    <br>
+                    <textarea name="description" id="description" rows="10" required></textarea>
+                    <section id="contactSubmitButtonSect"><button id="contactSubmitButton">Submit</button></section>
+                </form>
+            </section>
     </main>
     <footer>
         &copy;2021 Ed
     </footer>
+    <script src="JS/goToContactPage.js"></script>
 </body>
 
 </html>
