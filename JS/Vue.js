@@ -1,6 +1,9 @@
-export default {
-    components: { VueperSlides, VueperSlide }
-}
+const { VueperSlides, VueperSlide } = vueperslides
+
+new Vue({
+    components: { VueperSlides, VueperSlide },
+    el: '#app'
+})
 
 data: () => ({
     slides: [
