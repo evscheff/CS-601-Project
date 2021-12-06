@@ -16,12 +16,10 @@ function importResources() {
     })
         .then((data) => {
             console.log('Im working!');
-            for (var i in data) {
-                //jsonArray.push(data[i]);
-                for (var e in i) {
-                    console.log(e);
-                }
-            }
+            document.getElementById.apply('rsc1head').innerHTML = data.resources[0].resource.title;
+            // for (var i in data) {
+            //     //jsonArray.push(data[i]);
+            // }
         })
         .catch((error) => {
             console.log(error);
