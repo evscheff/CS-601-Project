@@ -1,10 +1,10 @@
 window.onload = function () {
+    var jsonArray = [];
     importResources();
     console.log('print2');
     console.log(jsonArray);
 }
 
-var jsonArray = [];
 
 async function importResources() {
     fetch('Data/resources.json').then((response) => {
