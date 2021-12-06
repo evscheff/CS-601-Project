@@ -16,7 +16,7 @@ var article5;
 var article6;
 
 
-async function importResources() {
+function importResources() {
     fetch('Data/resources.json').then((response) => {
         if (response.ok) {
             return response.json();
