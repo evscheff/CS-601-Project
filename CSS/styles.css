@@ -108,7 +108,7 @@ main {
 .rescLinkSect {
     display: flex;
     justify-content: center;
-    max-height: 100%;
+    height: 100%;
 }
 
 
