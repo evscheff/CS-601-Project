@@ -24,6 +24,7 @@ function importResources() {
         .then((data) => {
             console.log('Im working!');
             resource1 = data.resources[0];
+            console.log(resource1);
 
             // the below works
             // for (var i in data) {
