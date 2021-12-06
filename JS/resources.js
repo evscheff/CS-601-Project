@@ -1,13 +1,12 @@
 window.onload = function () {
     importResources();
     console.log(jsonArray);
-    var [article1, article2, article3, article4, article5, article6] = names;
+    var [article1, article2, article3, article4, article5, article6] = jsonArray;
     console.log(article1);
     console.log(article2);
 }
 
 var jsonArray = [];
-var article1 = jsonArray
 
 
 async function importResources() {
