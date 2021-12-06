@@ -1,8 +1,8 @@
 window.onload = function () {
     importResources();
     console.log(jsonArray);
-    article1 = jsonArray[0];
-    article2 = jsonArray[1];
+    article1 = jsonArray[0][0];
+    article2 = jsonArray[0][1];
     console.log(article1);
     console.log(article2);
 }
