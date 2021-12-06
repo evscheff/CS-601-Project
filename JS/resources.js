@@ -19,7 +19,7 @@ function importResources() {
             document.getElementById('rsc1title').innerHTML = data.resources[0].resource.title;
             document.getElementById('rsc1author').innerHTML = data.resources[0].resource.author;
             document.getElementById('rsc1about').innerHTML = `<b>Topic:</b> ${data.resources[0].resource.about}`;
-            document.getElementById('rsc1link').onclick = `location.href='${data.resources[0].resource.link}'`;
+            document.getElementById('rsc1link').href = data.resources[0].resource.link;
             document.getElementById('rsc2title').innerHTML = data.resources[1].resource.title;
             document.getElementById('rsc2author').innerHTML = data.resources[1].resource.author;
             document.getElementById('rsc2about').innerHTML = `<b>Topic:</b> ${data.resources[1].resource.about}`;
