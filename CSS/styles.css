@@ -86,6 +86,7 @@ main {
         padding: 0px 15px 0px 15px;
         margin: 15px 0px 15px 0px;
         background-color: #eeeeee;
+        max-width: 33%;
 }
 
 .BlueBlock2 {
@@ -96,6 +97,7 @@ main {
         background-color: #023047;
         color: white;
         font-weight: lighter;
+        max-width: 33%;
 }
 
 #resourcesSection {
