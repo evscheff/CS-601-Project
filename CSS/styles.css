@@ -83,7 +83,7 @@ main {
 .GreyBlock2 {
         border: 1px solid black;
         border-radius: 15px;
-        padding: 0px 15px 0px 15px;
+        padding: 0px 15px 15px 15px;
         margin: 15px 0px 15px 0px;
         background-color: #eeeeee;
         max-width: 40%;
@@ -92,13 +92,14 @@ main {
 .BlueBlock2 {
         border: 1px solid black;
         border-radius: 15px;
-        padding: 0px 15px 0px 15px;
+        padding: 0px 15px 15px 15px;
         margin: 15px 0px 15px 0px;
         background-color: #023047;
         color: white;
         font-weight: lighter;
         max-width: 40%;
 }
+
 
 #resourcesSection {
 display: flex;
