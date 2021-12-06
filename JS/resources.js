@@ -1,7 +1,9 @@
 window.onload = function () {
     importResources();
     console.log(jsonArray);
-    console.log(jsonArray[0]);
+    for (var i in data) {
+        console.log(i);
+    }
 }
 
 var jsonArray = [];
