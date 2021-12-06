@@ -15,10 +15,9 @@ async function importResources() {
     })
         .then((data) => {
             console.log('Im working!');
-            jsonObject = JSON.parse(data);
-            for (var i in jsonObject) {
-                jsonArray.push(jsonObject[i]);
-                console.log(jsonObject[i]);
+            for (var i in data) {
+                jsonArray.push(data[i]);
+                console.log(data[i]);
             }
         })
         .catch((error) => {
