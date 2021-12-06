@@ -100,6 +100,7 @@ main {
 
 #resourcesSection {
 display: flex;
+flex-wrap: wrap-reverse;
 }
 
 .BlueBlock > p > a, .BlueBlock a {
