@@ -20,6 +20,7 @@ async function importResources() {
             for (var i in data) {
                 jsonArray.push(data[i]);
             }
+            console.log(jsonArray);
         })
         .catch((error) => {
             console.log(error);
