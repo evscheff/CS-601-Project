@@ -16,10 +16,11 @@ function importResources() {
     })
         .then((data) => {
             console.log('Im working!');
-            for (var i in data) {
-                jsonArray.push(data[i]);
-                console.log(i);
-            }
+            console.log(data);
+            // for (var i in data) {
+            //     jsonArray.push(data[i]);
+            //     console.log(i);
+            // }
             //console.log(jsonArray);
         })
         .catch((error) => {
