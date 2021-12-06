@@ -107,7 +107,7 @@ flex-direction: row;
 flex-wrap: wrap;
 }
 
-.BlueBlock > p > a, .BlueBlock a {
+.BlueBlock > p > a, .BlueBlock a, .BlueBlock2 a, .GreyBlock2 a {
     color: #C5B783;
 }
 
