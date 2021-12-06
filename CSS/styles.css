@@ -86,7 +86,6 @@ main {
         padding: 0px 15px 0px 15px;
         margin: 15px 0px 15px 0px;
         background-color: #eeeeee;
-        display: flex;
 }
 
 .BlueBlock2 {
@@ -97,7 +96,6 @@ main {
         background-color: #023047;
         color: white;
         font-weight: lighter;
-        display: flex;
 }
 
 .BlueBlock > p > a, .BlueBlock a {
