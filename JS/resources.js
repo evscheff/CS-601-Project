@@ -1,3 +1,7 @@
+window.onload = function () {
+    importResources();
+}
+
 async function importResources() {
     fetch('Data/resources.json').then((response) => {
         if (response.ok) {
