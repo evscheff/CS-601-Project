@@ -16,7 +16,7 @@ function importResources() {
     })
         .then((data) => {
             console.log('Im working!');
-            document.getElementById.apply('rsc1head').innerHTML = data.resources[0].resource.title;
+            document.getElementById('rsc1head').innerHTML = data.resources[0].resource.title;
             // for (var i in data) {
             //     //jsonArray.push(data[i]);
             // }
