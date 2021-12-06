@@ -19,6 +19,9 @@ function importResources() {
             document.getElementById('rsc1title').innerHTML = data.resources[0].resource.title;
             document.getElementById('rsc1author').innerHTML = data.resources[0].resource.author;
             document.getElementById('rsc1about').innerHTML = data.resources[0].resource.about;
+            document.getElementById('rsc2title').innerHTML = data.resources[1].resource.title;
+            document.getElementById('rsc2author').innerHTML = data.resources[1].resource.author;
+            document.getElementById('rsc2about').innerHTML = data.resources[1].resource.about;
             // for (var i in data) {
             //     //jsonArray.push(data[i]);
             // }
