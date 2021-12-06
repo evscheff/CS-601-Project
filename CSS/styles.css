@@ -86,7 +86,7 @@ main {
         padding: 0px 15px 0px 15px;
         margin: 15px 0px 15px 0px;
         background-color: #eeeeee;
-        max-width: 33%;
+        max-width: 40%;
 }
 
 .BlueBlock2 {
@@ -97,12 +97,14 @@ main {
         background-color: #023047;
         color: white;
         font-weight: lighter;
-        max-width: 33%;
+        max-width: 40%;
 }
 
 #resourcesSection {
 display: flex;
-flex-wrap: wrap-reverse;
+justify-content: space-between;
+flex-direction: row;
+flex-wrap: wrap;
 }
 
 .BlueBlock > p > a, .BlueBlock a {
