@@ -1,8 +1,10 @@
 window.onload = function () {
     importResources();
+    for (var i in jsonArray) {
+        console.log(i);
+    }
 }
 
-let jsonObject;
 let jsonArray = [];
 
 async function importResources() {
@@ -17,7 +19,6 @@ async function importResources() {
             console.log('Im working!');
             for (var i in data) {
                 jsonArray.push(data[i]);
-                console.log(data[i]);
             }
         })
         .catch((error) => {
