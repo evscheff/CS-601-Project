@@ -1,7 +1,6 @@
 window.onload = function () {
     importResources();
     console.log(jsonArray);
-    console.log(jsonArray[0]);
 }
 
 var jsonArray = [];
@@ -19,6 +18,7 @@ function importResources() {
             console.log('Im working!');
             for (var i in data) {
                 jsonArray.push(data[i]);
+                console.log(i);
             }
             //console.log(jsonArray);
         })
