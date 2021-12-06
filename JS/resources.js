@@ -5,7 +5,7 @@ window.onload = function () {
     }
 }
 
-let jsonArray = [];
+var jsonArray = [];
 
 async function importResources() {
     fetch('Data/resources.json').then((response) => {
