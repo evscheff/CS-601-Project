@@ -80,6 +80,25 @@ main {
         color: white;
         font-weight: lighter;
 }
+.GreyBlock2 {
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 0px 15px 0px 15px;
+        margin: 15px 0px 15px 0px;
+        background-color: #eeeeee;
+        display: flex;
+}
+
+.BlueBlock2 {
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 0px 15px 0px 15px;
+        margin: 15px 0px 15px 0px;
+        background-color: #023047;
+        color: white;
+        font-weight: lighter;
+        display: flex;
+}
 
 .BlueBlock > p > a, .BlueBlock a {
     color: #C5B783;
