@@ -384,9 +384,6 @@ aside {
     nav {
         padding: 1rem;
     }
-    .BlueBlock2, .GreyBlock2 {
-        width: 90%
-    }
 }
 
     @media print {
@@ -413,7 +410,4 @@ aside {
             border-bottom: 1px solid black;
             border-radius: 0px;
         }
-        .BlueBlock2, .GreyBlock2 {
-            width: 90%;
-    }
 }
