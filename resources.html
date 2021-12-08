@@ -48,11 +48,12 @@
                     </div>
                     <p id="rsc1about" @mouseover="mouseOver1" @mouseleave="mouseLeave1"></p>
                 </div>
-                <div class="BlueBlock2">
-                    <h2 id="rsc2title"></h2>
-                    <h3 id="rsc2author"></h3>
-                    <p id="rsc2about"></p>
-                    <div class="rescLinkSect"><a href="" id="rsc2link">Access Article Here</a></div>
+                <div class="BlueBlock2" @mouseover="mouseOver2" @mouseleave="mouseLeave2">
+                    <h2 id="rsc2title" @mouseover="mouseOver2" @mouseleave="mouseLeave2"></h2>
+                    <h3 id="rsc2author" @mouseover="mouseOver2" @mouseleave="mouseLeave2"></h3>
+                    <p id="rsc2about" @mouseover="mouseOver2" @mouseleave="mouseLeave2"></p>
+                    <div class="rescLinkSect" @mouseover="mouseOver2" @mouseleave="mouseLeave2"><a href=""
+                            id="rsc2link">Access Article Here</a></div>
                 </div>
                 <div class="BlueBlock2">
                     <h2 id="rsc3title"></h2>
@@ -112,10 +113,10 @@
                             this.active1 = false;
                         },
                         mouseOver2: function () {
-                            this.active2 = !this.active2;
+                            this.active2 = true;
                         },
                         mouseLeave2: function () {
-                            this.active2 = !this.active2;
+                            this.active2 = false;
                         },
                         mouseOver3: function () {
                             this.active3 = !this.active3;
