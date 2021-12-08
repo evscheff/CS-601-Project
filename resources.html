@@ -40,9 +40,10 @@
             </p>
             <section id="resourcesSection">
                 <div class="GreyBlock2" @mouseover="mouseOver1" @mouseleave="mouseLeave1">
-                    <h2 id="rsc1title"></h2>
-                    <h3 id="rsc1author"></h3>
-                    <div class="rescLinkSect" v-show="active1"><a href="" id="rsc1link">Access Article Here</a>
+                    <h2 id="rsc1title" @mouseover="mouseOver1" @mouseleave="mouseLeave1"></h2>
+                    <h3 id="rsc1author" @mouseover="mouseOver1" @mouseleave="mouseLeave1"></h3>
+                    <div class="rescLinkSect" v-show="active1"><a href="" id="rsc1link" @mouseover="mouseOver1"
+                            @mouseleave="mouseLeave1">Access Article Here</a>
                     </div>
                     <p id="rsc1about"></p>
                 </div>
