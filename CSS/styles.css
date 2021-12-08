@@ -298,6 +298,10 @@ aside {
     vertical-align: center;
 }
 
+#resourcesSection {
+    width: 100%;
+}
+
 
 /* Styling for Small Screens */
 @media (max-width: 640px) {
@@ -381,7 +385,7 @@ aside {
         padding: 1rem;
     }
     .BlueBlock2, .GreyBlock2 {
-        max-width: 95%
+        max-width: 100%
     }
 }
 
@@ -410,6 +414,6 @@ aside {
             border-radius: 0px;
         }
         .BlueBlock2, .GreyBlock2 {
-            max-width: 95%
+            max-width: 100%;
     }
 }
