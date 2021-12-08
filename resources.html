@@ -38,7 +38,7 @@
                 to whitepapers, I've compiled a library of resources. Now I'm sharing a few of my favorites with
                 you.
             </p>
-            <div id="resourcesSection">
+            <section id="resourcesSection">
                 <section class="GreyBlock2" @mouseover="mouseOver1" @mouseleave="mouseLeave1">
                     <h2 id="rsc1title"></h2>
                     <h3 id="rsc1author"></h3>
@@ -76,7 +76,7 @@
                     <p id="rsc6about"></p>
                     <section class="rescLinkSect"><a href="" id="rsc6link">Access Article Here</a></section>
                 </section>
-            </div>
+            </section>
             <aside>
                 <section id="AndCallsToAction">
                     <h2>
@@ -93,7 +93,7 @@
             </aside>
             <script>
                 var resourcesSection = new Vue({
-                    el: 'resourcesSection',
+                    el: '#resourcesSection',
                     data: {
                         active1: false,
                         active2: false,
@@ -143,7 +143,7 @@
                             },
                         }
                     }
-                })
+                });
             </script>
         </body>
     </main>
