@@ -56,29 +56,39 @@
                     <p id="rsc2about" @mouseover="mouseOver2" @mouseleave="mouseLeave2"></p>
 
                 </div>
-                <div class="BlueBlock2">
-                    <h2 id="rsc3title"></h2>
-                    <h3 id="rsc3author"></h3>
-                    <p id="rsc3about"></p>
-                    <div class="rescLinkSect"><a href="" id="rsc3link">Access Article Here</a></div>
+                <div class="BlueBlock2" @mouseover="mouseOver3" @mouseleave="mouseLeave3">
+                    <h2 id="rsc3title" @mouseover="mouseOver3" @mouseleave="mouseLeave3"></h2>
+                    <h3 id="rsc3author" @mouseover="mouseOver3" @mouseleave="mouseLeave3"></h3>
+                    <div class="rescLinkSect" v-show="active3" @mouseover="mouseOver3" @mouseleave="mouseLeave3"><a
+                            href="" id="rsc3link" @mouseover="mouseOver3" @mouseleave="mouseLeave3">Access Article
+                            Here</a></div>
+                    <p id="rsc3about" @mouseover="mouseOver3" @mouseleave="mouseLeave3"></p>
+                </div>
+                <div class="GreyBlock2" @mouseover="mouseOver4" @mouseleave="mouseLeave4">
+                    <h2 id="rsc4title" @mouseover="mouseOver4" @mouseleave="mouseLeave4"></h2>
+                    <h3 id="rsc4author" @mouseover="mouseOver4" @mouseleave="mouseLeave4"></h3>
+                    <div class="rescLinkSect" v-show="active4" @mouseover="mouseOver4" @mouseleave="mouseLeave4"><a
+                            href="" id="rsc4link" @mouseover="mouseOver4" @mouseleave="mouseLeave4">Access Article
+                            Here</a></div>
+                    <p id="rsc4about" @mouseover="mouseOver4" @mouseleave="mouseLeave4"></p>
                 </div>
                 <div class="GreyBlock2">
-                    <h2 id="rsc4title"></h2>
-                    <h3 id="rsc4author"></h3>
-                    <p id="rsc4about"></p>
-                    <div class="rescLinkSect"><a href="" id="rsc4link">Access Article Here</a></div>
+                    <h2 id="rsc5title" @mouseover="mouseOver5" @mouseleave="mouseLeave5"></h2>
+                    <h3 id="rsc5author" @mouseover="mouseOver5" @mouseleave="mouseLeave5"></h3>
+                    <div class="rescLinkSect" v-show="active5" @mouseover="mouseOver5" @mouseleave="mouseLeave5"><a
+                            href="" id="rsc5link" @mouseover="mouseOver5" @mouseleave="mouseLeave5">Access Article
+                            Here</a></div>
+                    <p id="rsc5about" @mouseover="mouseOver5" @mouseleave="mouseLeave5"></p>
+
                 </div>
-                <div class="GreyBlock2">
-                    <h2 id="rsc5title"></h2>
-                    <h3 id="rsc5author"></h3>
-                    <p id="rsc5about"></p>
-                    <div class="rescLinkSect"><a href="" id="rsc5link">Access Article Here</a></div>
-                </div>
-                <div class="BlueBlock2">
-                    <h2 id="rsc6title"></h2>
-                    <h3 id="rsc6author"></h3>
-                    <p id="rsc6about"></p>
-                    <div class="rescLinkSect"><a href="" id="rsc6link">Access Article Here</a></div>
+                <div class="BlueBlock2" @mouseover="mouseOver6" @mouseleave="mouseLeave6">
+                    <h2 id="rsc6title" @mouseover="mouseOver6" @mouseleave="mouseLeave6"></h2>
+                    <h3 id="rsc6author" @mouseover="mouseOver6" @mouseleave="mouseLeave6"></h3>
+                    <div class="rescLinkSect" v-show="active6" @mouseover="mouseOver6" @mouseleave="mouseLeave6"><a
+                            href="" id="rsc6link" @mouseover="mouseOver6" @mouseleave="mouseLeave6">Access Article
+                            Here</a></div>
+                    <p id="rsc6about" @mouseover="mouseOver6" @mouseleave="mouseLeave6"></p>
+
                 </div>
             </section>
             <aside>
@@ -120,28 +130,28 @@
                             this.active2 = false;
                         },
                         mouseOver3: function () {
-                            this.active3 = !this.active3;
+                            this.active3 = true;
                         },
                         mouseLeave3: function () {
-                            this.active3 = !this.active3;
+                            this.active3 = false;
                         },
                         mouseOver4: function () {
-                            this.active4 = !this.active4;
+                            this.active4 = true;
                         },
                         mouseLeave4: function () {
-                            this.active4 = !this.active4;
+                            this.active4 = false;
                         },
                         mouseOver5: function () {
-                            this.active5 = !this.active5;
+                            this.active5 = true;
                         },
                         mouseLeave5: function () {
-                            this.active5 = !this.active5;
+                            this.active5 = false;
                         },
                         mouseOver6: function () {
-                            this.active6 = !this.active6;
+                            this.active6 = true;
                         },
                         mouseLeave6: function () {
-                            this.active6 = !this.active6;
+                            this.active6 = false;
                         },
                     }
                 });
