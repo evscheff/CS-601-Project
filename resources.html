@@ -25,67 +25,126 @@
         </nav>
     </header>
     <main>
-        <h1>
-            Resources
-        </h1>
-        <p>
-            Over the years, I've searched high and low for the best resources to help me learn about supply chain and
-            data. From blogs to articles
-            to whitepapers, I've compiled a library of resources. Now I'm sharing a few of my favorites with
-            you.
-        </p>
-        <section id="resourcesSection">
-            <section class="GreyBlock2">
-                <h2 id="rsc1title"></h2>
-                <h3 id="rsc1author"></h3>
-                <p id="rsc1about"></p>
-                <section class="rescLinkSect"><a href="" id="rsc1link">Access Article Here</a></section>
-            </section>
-            <section class="BlueBlock2">
-                <h2 id="rsc2title"></h2>
-                <h3 id="rsc2author"></h3>
-                <p id="rsc2about"></p>
-                <section class="rescLinkSect"><a href="" id="rsc2link">Access Article Here</a></section>
-            </section>
-            <section class="BlueBlock2">
-                <h2 id="rsc3title"></h2>
-                <h3 id="rsc3author"></h3>
-                <p id="rsc3about"></p>
-                <section class="rescLinkSect"><a href="" id="rsc3link">Access Article Here</a></section>
-            </section>
-            <section class="GreyBlock2">
-                <h2 id="rsc4title"></h2>
-                <h3 id="rsc4author"></h3>
-                <p id="rsc4about"></p>
-                <section class="rescLinkSect"><a href="" id="rsc4link">Access Article Here</a></section>
-            </section>
-            <section class="GreyBlock2">
-                <h2 id="rsc5title"></h2>
-                <h3 id="rsc5author"></h3>
-                <p id="rsc5about"></p>
-                <section class="rescLinkSect"><a href="" id="rsc5link">Access Article Here</a></section>
-            </section>
-            <section class="BlueBlock2">
-                <h2 id="rsc6title"></h2>
-                <h3 id="rsc6author"></h3>
-                <p id="rsc6about"></p>
-                <section class="rescLinkSect"><a href="" id="rsc6link">Access Article Here</a></section>
-            </section>
-        </section>
-        <aside>
-            <section id="AndCallsToAction">
-                <h2>
-                    Solve Your Supply Chain Headaches Now
-                </h2>
-                <p>
-                    Sure, the resources help. But they're only a stepping stone, and I've had the experience doing these
-                    things. <a href="contact.html">Contact
-                        me
-                        now</a> to find out how I can help!
-                </p>
-            </section>
-        </aside>
 
+        <body>
+            <h1>
+                Resources
+            </h1>
+            <p>
+                Over the years, I've searched high and low for the best resources to help me learn about supply chain
+                and
+                data. From blogs to articles
+                to whitepapers, I've compiled a library of resources. Now I'm sharing a few of my favorites with
+                you.
+            </p>
+            <section id="resourcesSection">
+                <section class="GreyBlock2" @mouseover="mouseOver1" @mouseleave="mouseLeave1">
+                    <h2 id="rsc1title"></h2>
+                    <h3 id="rsc1author"></h3>
+                    <section class="rescLinkSect" v-show="active1"><a href="" id="rsc1link">Access Article Here</a>
+                    </section>
+                    <p id="rsc1about"></p>
+                </section>
+                <section class="BlueBlock2">
+                    <h2 id="rsc2title"></h2>
+                    <h3 id="rsc2author"></h3>
+                    <p id="rsc2about"></p>
+                    <section class="rescLinkSect"><a href="" id="rsc2link">Access Article Here</a></section>
+                </section>
+                <section class="BlueBlock2">
+                    <h2 id="rsc3title"></h2>
+                    <h3 id="rsc3author"></h3>
+                    <p id="rsc3about"></p>
+                    <section class="rescLinkSect"><a href="" id="rsc3link">Access Article Here</a></section>
+                </section>
+                <section class="GreyBlock2">
+                    <h2 id="rsc4title"></h2>
+                    <h3 id="rsc4author"></h3>
+                    <p id="rsc4about"></p>
+                    <section class="rescLinkSect"><a href="" id="rsc4link">Access Article Here</a></section>
+                </section>
+                <section class="GreyBlock2">
+                    <h2 id="rsc5title"></h2>
+                    <h3 id="rsc5author"></h3>
+                    <p id="rsc5about"></p>
+                    <section class="rescLinkSect"><a href="" id="rsc5link">Access Article Here</a></section>
+                </section>
+                <section class="BlueBlock2">
+                    <h2 id="rsc6title"></h2>
+                    <h3 id="rsc6author"></h3>
+                    <p id="rsc6about"></p>
+                    <section class="rescLinkSect"><a href="" id="rsc6link">Access Article Here</a></section>
+                </section>
+            </section>
+            <aside>
+                <section id="AndCallsToAction">
+                    <h2>
+                        Solve Your Supply Chain Headaches Now
+                    </h2>
+                    <p>
+                        Sure, the resources help. But they're only a stepping stone, and I've had the experience doing
+                        these
+                        things. <a href="contact.html">Contact
+                            me
+                            now</a> to find out how I can help!
+                    </p>
+                </section>
+            </aside>
+            <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+            <script>
+                var app = new Vue({
+                    el: 'app',
+                    data: {
+                        active1: false,
+                        active2: false,
+                        active3: false,
+                        active4: false,
+                        active5: false,
+                        active6: false
+                    },
+                    methods: {
+                        methods: {
+                            mouseOver1: function () {
+                                this.active1 = !this.active1;
+                            },
+                            mouseLeave1: function () {
+                                this.active1 = !this.active1;
+                            },
+                            mouseOver2: function () {
+                                this.active2 = !this.active2;
+                            },
+                            mouseLeave2: function () {
+                                this.active2 = !this.active2;
+                            },
+                            mouseOver3: function () {
+                                this.active3 = !this.active3;
+                            },
+                            mouseLeave3: function () {
+                                this.active3 = !this.active3;
+                            },
+                            mouseOver4: function () {
+                                this.active4 = !this.active4;
+                            },
+                            mouseLeave4: function () {
+                                this.active4 = !this.active4;
+                            },
+                            mouseOver5: function () {
+                                this.active5 = !this.active5;
+                            },
+                            mouseLeave5: function () {
+                                this.active5 = !this.active5;
+                            },
+                            mouseOver6: function () {
+                                this.active6 = !this.active6;
+                            },
+                            mouseLeave6: function () {
+                                this.active6 = !this.active6;
+                            },
+                        }
+                    }
+                })
+            </script>
+        </body>
     </main>
     <footer>
         &copy;2021 Ed
