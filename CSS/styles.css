@@ -385,7 +385,7 @@ aside {
         padding: 1rem;
     }
     .BlueBlock2, .GreyBlock2 {
-        max-width: 100%
+        width: 90%
     }
 }
 
@@ -414,6 +414,6 @@ aside {
             border-radius: 0px;
         }
         .BlueBlock2, .GreyBlock2 {
-            max-width: 100%;
+            width: 90%;
     }
 }
