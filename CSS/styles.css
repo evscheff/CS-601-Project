@@ -275,6 +275,7 @@ form {
     font-weight: bolder;
     padding: 0px 10px 0px 10px;
     cursor: pointer;
+    justify-self: center;
 }
 
 ctaButtonWrapper {
