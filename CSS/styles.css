@@ -277,6 +277,11 @@ form {
     cursor: pointer;
 }
 
+ctaButtonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
 
 #contactButtonOnPage {
     background-color: #739e6f;
