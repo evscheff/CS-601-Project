@@ -276,12 +276,14 @@ form {
     padding: 0px 10px 0px 10px;
     cursor: pointer;
     margin: 0 auto;
+    text-align: center;
 }
 
 ctaButtonWrapper {
     display: flex;
     justify-content: center;
     width: 100%;
+    text-align: center;
 }
 
 
