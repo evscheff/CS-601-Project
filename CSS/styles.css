@@ -86,7 +86,7 @@ main {
         padding: 0px 15px 15px 15px;
         margin: 15px 0px 15px 0px;
         background-color: #eeeeee;
-        max-width: 45%;
+        width: 45%;
 }
 
 .BlueBlock2 {
@@ -97,7 +97,7 @@ main {
         background-color: #023047;
         color: white;
         font-weight: lighter;
-        max-width: 45%;
+        width: 45%;
 }
 
 .BlueBlock2 a, .GreyBlock2 a {
