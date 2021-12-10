@@ -26,137 +26,86 @@
     </header>
     <main>
 
-        <body>
-            <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-            <h1>
-                Resources
-            </h1>
-            <p>
-                Over the years, I've searched high and low for the best resources to help me learn about supply chain
-                and
-                data. From blogs to articles
-                to whitepapers, I've compiled a library of resources. Now I'm sharing a few of my favorites with
-                you.
-            </p>
-            <section id="resourcesSection">
-                <div class="GreyBlock2" @mouseover="mouseOver1" @mouseleave="mouseLeave1">
-                    <h2 id="rsc1title" @mouseover="mouseOver1" @mouseleave="mouseLeave1"></h2>
-                    <h3 id="rsc1author" @mouseover="mouseOver1" @mouseleave="mouseLeave1"></h3>
-                    <div class="rescLinkSect" v-show="active1" @mouseover="mouseOver1" @mouseleave="mouseLeave1"><a
-                            href="" id="rsc1link" @mouseover="mouseOver1" @mouseleave="mouseLeave1">Access Article
-                            Here</a>
-                    </div>
-                    <p id="rsc1about" @mouseover="mouseOver1" @mouseleave="mouseLeave1"></p>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <h1>
+            Resources
+        </h1>
+        <p>
+            Over the years, I've searched high and low for the best resources to help me learn about supply chain
+            and
+            data. From blogs to articles
+            to whitepapers, I've compiled a library of resources. Now I'm sharing a few of my favorites with
+            you.
+        </p>
+        <section id="resourcesSection">
+            <div class="GreyBlock2" @mouseover="mouseOver1" @mouseleave="mouseLeave1">
+                <h2 id="rsc1title" @mouseover="mouseOver1" @mouseleave="mouseLeave1">Title</h2>
+                <h3 id="rsc1author" @mouseover="mouseOver1" @mouseleave="mouseLeave1">Author</h3>
+                <div class="rescLinkSect" v-show="active1" @mouseover="mouseOver1" @mouseleave="mouseLeave1"><a href=""
+                        id="rsc1link" @mouseover="mouseOver1" @mouseleave="mouseLeave1">Access Article
+                        Here</a>
                 </div>
-                <div class="BlueBlock2" @mouseover="mouseOver2" @mouseleave="mouseLeave2">
-                    <h2 id="rsc2title" @mouseover="mouseOver2" @mouseleave="mouseLeave2"></h2>
-                    <h3 id="rsc2author" @mouseover="mouseOver2" @mouseleave="mouseLeave2"></h3>
-                    <div class="rescLinkSect" v-show="active2" @mouseover="mouseOver2" @mouseleave="mouseLeave2"><a
-                            href="" id="rsc2link">Access Article Here</a></div>
-                    <p id="rsc2about" @mouseover="mouseOver2" @mouseleave="mouseLeave2"></p>
+                <p id="rsc1about" @mouseover="mouseOver1" @mouseleave="mouseLeave1"></p>
+            </div>
+            <div class="BlueBlock2" @mouseover="mouseOver2" @mouseleave="mouseLeave2">
+                <h2 id="rsc2title" @mouseover="mouseOver2" @mouseleave="mouseLeave2">Title</h2>
+                <h3 id="rsc2author" @mouseover="mouseOver2" @mouseleave="mouseLeave2">Author</h3>
+                <div class="rescLinkSect" v-show="active2" @mouseover="mouseOver2" @mouseleave="mouseLeave2"><a href=""
+                        id="rsc2link">Access Article Here</a></div>
+                <p id="rsc2about" @mouseover="mouseOver2" @mouseleave="mouseLeave2"></p>
 
-                </div>
-                <div class="BlueBlock2" @mouseover="mouseOver3" @mouseleave="mouseLeave3">
-                    <h2 id="rsc3title" @mouseover="mouseOver3" @mouseleave="mouseLeave3"></h2>
-                    <h3 id="rsc3author" @mouseover="mouseOver3" @mouseleave="mouseLeave3"></h3>
-                    <div class="rescLinkSect" v-show="active3" @mouseover="mouseOver3" @mouseleave="mouseLeave3"><a
-                            href="" id="rsc3link" @mouseover="mouseOver3" @mouseleave="mouseLeave3">Access Article
-                            Here</a></div>
-                    <p id="rsc3about" @mouseover="mouseOver3" @mouseleave="mouseLeave3"></p>
-                </div>
-                <div class="GreyBlock2" @mouseover="mouseOver4" @mouseleave="mouseLeave4">
-                    <h2 id="rsc4title" @mouseover="mouseOver4" @mouseleave="mouseLeave4"></h2>
-                    <h3 id="rsc4author" @mouseover="mouseOver4" @mouseleave="mouseLeave4"></h3>
-                    <div class="rescLinkSect" v-show="active4" @mouseover="mouseOver4" @mouseleave="mouseLeave4"><a
-                            href="" id="rsc4link" @mouseover="mouseOver4" @mouseleave="mouseLeave4">Access Article
-                            Here</a></div>
-                    <p id="rsc4about" @mouseover="mouseOver4" @mouseleave="mouseLeave4"></p>
-                </div>
-                <div class="GreyBlock2" @mouseover="mouseOver5" @mouseleave="mouseLeave5">
-                    <h2 id="rsc5title" @mouseover="mouseOver5" @mouseleave="mouseLeave5"></h2>
-                    <h3 id="rsc5author" @mouseover="mouseOver5" @mouseleave="mouseLeave5"></h3>
-                    <div class="rescLinkSect" v-show="active5" @mouseover="mouseOver5" @mouseleave="mouseLeave5"><a
-                            href="" id="rsc5link" @mouseover="mouseOver5" @mouseleave="mouseLeave5">Access Article
-                            Here</a></div>
-                    <p id="rsc5about" @mouseover="mouseOver5" @mouseleave="mouseLeave5"></p>
+            </div>
+            <div class="BlueBlock2" @mouseover="mouseOver3" @mouseleave="mouseLeave3">
+                <h2 id="rsc3title" @mouseover="mouseOver3" @mouseleave="mouseLeave3">Title</h2>
+                <h3 id="rsc3author" @mouseover="mouseOver3" @mouseleave="mouseLeave3">Author</h3>
+                <div class="rescLinkSect" v-show="active3" @mouseover="mouseOver3" @mouseleave="mouseLeave3"><a href=""
+                        id="rsc3link" @mouseover="mouseOver3" @mouseleave="mouseLeave3">Access Article
+                        Here</a></div>
+                <p id="rsc3about" @mouseover="mouseOver3" @mouseleave="mouseLeave3"></p>
+            </div>
+            <div class="GreyBlock2" @mouseover="mouseOver4" @mouseleave="mouseLeave4">
+                <h2 id="rsc4title" @mouseover="mouseOver4" @mouseleave="mouseLeave4">Title</h2>
+                <h3 id="rsc4author" @mouseover="mouseOver4" @mouseleave="mouseLeave4">Author</h3>
+                <div class="rescLinkSect" v-show="active4" @mouseover="mouseOver4" @mouseleave="mouseLeave4"><a href=""
+                        id="rsc4link" @mouseover="mouseOver4" @mouseleave="mouseLeave4">Access Article
+                        Here</a></div>
+                <p id="rsc4about" @mouseover="mouseOver4" @mouseleave="mouseLeave4"></p>
+            </div>
+            <div class="GreyBlock2" @mouseover="mouseOver5" @mouseleave="mouseLeave5">
+                <h2 id="rsc5title" @mouseover="mouseOver5" @mouseleave="mouseLeave5">Title</h2>
+                <h3 id="rsc5author" @mouseover="mouseOver5" @mouseleave="mouseLeave5">Author</h3>
+                <div class="rescLinkSect" v-show="active5" @mouseover="mouseOver5" @mouseleave="mouseLeave5"><a href=""
+                        id="rsc5link" @mouseover="mouseOver5" @mouseleave="mouseLeave5">Access Article
+                        Here</a></div>
+                <p id="rsc5about" @mouseover="mouseOver5" @mouseleave="mouseLeave5"></p>
 
-                </div>
-                <div class="BlueBlock2" @mouseover="mouseOver6" @mouseleave="mouseLeave6">
-                    <h2 id="rsc6title" @mouseover="mouseOver6" @mouseleave="mouseLeave6"></h2>
-                    <h3 id="rsc6author" @mouseover="mouseOver6" @mouseleave="mouseLeave6"></h3>
-                    <div class="rescLinkSect" v-show="active6" @mouseover="mouseOver6" @mouseleave="mouseLeave6"><a
-                            href="" id="rsc6link" @mouseover="mouseOver6" @mouseleave="mouseLeave6">Access Article
-                            Here</a></div>
-                    <p id="rsc6about" @mouseover="mouseOver6" @mouseleave="mouseLeave6"></p>
+            </div>
+            <div class="BlueBlock2" @mouseover="mouseOver6" @mouseleave="mouseLeave6">
+                <h2 id="rsc6title" @mouseover="mouseOver6" @mouseleave="mouseLeave6">Title</h2>
+                <h3 id="rsc6author" @mouseover="mouseOver6" @mouseleave="mouseLeave6">Author</h3>
+                <div class="rescLinkSect" v-show="active6" @mouseover="mouseOver6" @mouseleave="mouseLeave6"><a href=""
+                        id="rsc6link" @mouseover="mouseOver6" @mouseleave="mouseLeave6">Access Article
+                        Here</a></div>
+                <p id="rsc6about" @mouseover="mouseOver6" @mouseleave="mouseLeave6"></p>
 
-                </div>
+            </div>
+        </section>
+        <aside>
+            <section id="AndCallsToAction">
+                <h2>
+                    Solve Your Supply Chain Headaches Now
+                </h2>
+                <p>
+                    Sure, the resources help. But they're only a stepping stone, and I've had the experience doing
+                    these
+                    things. <a href="contact.html">Contact
+                        me
+                        now</a> to find out how I can help!
+                </p>
             </section>
-            <aside>
-                <section id="AndCallsToAction">
-                    <h2>
-                        Solve Your Supply Chain Headaches Now
-                    </h2>
-                    <p>
-                        Sure, the resources help. But they're only a stepping stone, and I've had the experience doing
-                        these
-                        things. <a href="contact.html">Contact
-                            me
-                            now</a> to find out how I can help!
-                    </p>
-                </section>
-            </aside>
-            <script src="JS/resourcesSection.js">
-                // var resourcesSection = new Vue({
-                //     el: '#resourcesSection',
-                //     data: {
-                //         active1: false,
-                //         active2: false,
-                //         active3: false,
-                //         active4: false,
-                //         active5: false,
-                //         active6: false
-                //     },
-                //     methods: {
-                //         mouseOver1: function () {
-                //             this.active1 = true;
-                //         },
-                //         mouseLeave1: function () {
-                //             this.active1 = false;
-                //         },
-                //         mouseOver2: function () {
-                //             this.active2 = true;
-                //         },
-                //         mouseLeave2: function () {
-                //             this.active2 = false;
-                //         },
-                //         mouseOver3: function () {
-                //             this.active3 = true;
-                //         },
-                //         mouseLeave3: function () {
-                //             this.active3 = false;
-                //         },
-                //         mouseOver4: function () {
-                //             this.active4 = true;
-                //         },
-                //         mouseLeave4: function () {
-                //             this.active4 = false;
-                //         },
-                //         mouseOver5: function () {
-                //             this.active5 = true;
-                //         },
-                //         mouseLeave5: function () {
-                //             this.active5 = false;
-                //         },
-                //         mouseOver6: function () {
-                //             this.active6 = true;
-                //         },
-                //         mouseLeave6: function () {
-                //             this.active6 = false;
-                //         },
-                //     }
-                // });
-            </script>
-        </body>
+        </aside>
+        <script src="JS/resourcesSection.js">
+        </script>
     </main>
     <footer>
         &copy;2021 Ed

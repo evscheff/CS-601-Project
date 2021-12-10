@@ -344,6 +344,10 @@ aside {
         display:none;
     }
 
+    .BlueBlock2, .GreyBlock2 {
+        max-width: 100%;
+    }
+
 }
 
 @media (min-width: 640px) {
@@ -383,6 +387,9 @@ aside {
     }
     nav {
         padding: 1rem;
+    }
+    .BlueBlock2, .GreyBlock2 {
+        max-width: 100%;
     }
 }
 
