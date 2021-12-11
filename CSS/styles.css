@@ -377,6 +377,10 @@ aside {
     .BlueBlock2, .GreyBlock2 {
         width: 100%;
     }
+    
+    .storybrandGrouping {
+        display: block;
+    }
     #HeroWithProblem, #MeetsGuide {
     width: 100%;
 }
@@ -427,6 +431,9 @@ aside {
     #HeroWithProblem, #MeetsGuide {
     width: 100%;
 }
+    .storybrandGrouping {
+        display: block;
+    }
 }
 
     @media print {
