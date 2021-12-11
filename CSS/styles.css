@@ -144,10 +144,10 @@ figure > img {
     height: auto;
 }
 
-#BrokenChain {
+/* #BrokenChain {
     float: left;
     max-width: 12%;
-}
+} */
 
 #Collaboration {
    float: right;
