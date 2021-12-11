@@ -24,7 +24,7 @@ p {
     font-size: 1.2rem;
 }
 
-form {
+form, ul {
     font-size: 1.2rem;
 }
 
@@ -209,6 +209,7 @@ table, th, td, caption {
     border: 1px solid #3d405b;
     border-collapse: collapse;
     padding: 0px 10px 0px 10px;
+    font-size: 1.2rem;
 }
 
 #MySkillsTable {
@@ -380,6 +381,7 @@ aside {
     
     .storybrandGrouping {
         display: block;
+        width: 80%;
     }
     #HeroWithProblem, #MeetsGuide {
     width: 100%;
@@ -433,6 +435,7 @@ aside {
 }
     .storybrandGrouping {
         display: block;
+        width: 80%;
     }
 }
 
