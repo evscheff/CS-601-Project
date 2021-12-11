@@ -64,16 +64,17 @@ main {
 
 .storybrandGrouping {
     display: flex;
+    justify-content: space-between;
 }
 
 #HeroWithProblem, #MeetsGuide {
-    max-width: 50%;
+    width: 45%;
 }
 
 /* Main Templates for Standard Blocks */
 .GreyBlock {
         border: 1px solid black;
-        border-radius: 15px;
+        border-radius: 7px;
         padding: 0px 30px 0px 30px;
         margin: 15px 0px 15px 0px;
         background-color: #eeeeee;
@@ -81,7 +82,7 @@ main {
 
 .BlueBlock {
         border: 1px solid black;
-        border-radius: 15px;
+        border-radius: 7px;
         padding: 0px 30px 0px 30px;
         margin: 15px 0px 15px 0px;
         background-color: #023047;
@@ -90,7 +91,7 @@ main {
 }
 .GreyBlock2 {
         border: 1px solid black;
-        border-radius: 15px;
+        border-radius: 7px;
         padding: 0px 15px 15px 15px;
         margin: 15px 0px 15px 0px;
         background-color: #eeeeee;
@@ -99,7 +100,7 @@ main {
 
 .BlueBlock2 {
         border: 1px solid black;
-        border-radius: 15px;
+        border-radius: 7px;
         padding: 0px 15px 15px 15px;
         margin: 15px 0px 15px 0px;
         background-color: #023047;
@@ -222,7 +223,7 @@ table, th, td, caption {
 
 #ssCalc, #ssCalc2 {
     border: 2px dashed #023047;
-    border-radius: 15px;
+    border-radius: 7px;
     padding: 10px;
     width: fit-content;
     margin-bottom: 15px;
@@ -249,7 +250,7 @@ table, th, td, caption {
     font-weight: lighter;
     font-size: 1.3rem;
     border: 1px solid white;
-    border-radius: 15px;
+    border-radius: 7px;
     padding: 5px 10px 5px 10px;;
     margin-top: 10px;
 }
@@ -316,7 +317,7 @@ footer {
 aside {
     background-color: #C5B783;
     border: 1px solid black;
-    border-radius: 15px;
+    border-radius: 7px;
     padding: 0px 15px 10px 15px;
     margin: 15px 25% 15px 25%;
     max-width: fit-content;
