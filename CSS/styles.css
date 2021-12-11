@@ -184,7 +184,7 @@ figure > img {
 
 #EdClimbing {
     float:right;
-    max-width: 22%;
+    max-width: 20%;
 }
 
 #MyBackground {
@@ -377,6 +377,9 @@ aside {
     .BlueBlock2, .GreyBlock2 {
         width: 100%;
     }
+    #HeroWithProblem, #MeetsGuide {
+    width: 42.5%;
+}
 
 }
 
@@ -421,6 +424,9 @@ aside {
     .BlueBlock2, .GreyBlock2 {
         width: 100%;
     }
+    #HeroWithProblem, #MeetsGuide {
+    width: 42.5%;
+}
 }
 
     @media print {
