@@ -64,7 +64,10 @@ main {
 
 .storybrandGrouping {
     display: flex;
-    flex-wrap: wrap;
+}
+
+#HeroWithProblem, #MeetsGuide {
+    max-width: 50%;
 }
 
 /* Main Templates for Standard Blocks */
