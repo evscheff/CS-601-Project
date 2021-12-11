@@ -403,6 +403,9 @@ aside {
     #HeroWithProblem, #MeetsGuide {
     width: 100%;
 }
+.BlueBlock, .GreyBlock, #WhoGivesThemPlan {
+    padding: 30px;
+}
 
 }
 
@@ -454,6 +457,9 @@ aside {
         display: block;
         width: 80%;
     }
+    .BlueBlock, .GreyBlock, #WhoGivesThemPlan {
+    padding: 30px;
+}
 }
 
     @media print {

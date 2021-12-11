@@ -1,58 +1,87 @@
-# Assignment 2
+# CS 601 Project
 ## Edward Scheff
 
 My website is the start of a site that's all about consulting services I can offer. I'm in the MSSD program but still really enjoy solving business analytics and supply chain problems, so want to do some consulting in that domain as a side business.
 
 ### How to Open the Website
-- Unzip the folder
+- Live version on web at: https://serene-panini-537ecb.netlify.app/index.html
+- Submitted project: Unzip the folder
 - Intended starting page is 'index.html', though it is possible to open any of the .html files and navigate to any of the other pages
 - Right-click on the file in your file browser, click 'Open With', and select the browser you woud like to use to open
 - Enjoy the site!
 
-### Changes Since Last Week
-- CSS styling
-- Added a new page (Sample)
-- Broke up paragraphs of text so mobile views aren't unbroken walls of words
-- Minor rephrasings + additions to verbiage
-- Cleaned up classes as my design came together
+### Feedback from Presentation Implemented
+- Increased font size and padding on screen
+- Changed the color of the nav & footer
+- Borders rounded to a lesser extent
+- Used .jpeg images where there were .avif files
+- Introduced 2-column layout to top of home page
 
-### Things to Note
-- HTML and CSS both validated before submitting with no additional changes to either after validation
-- I really struggle with creating good aesthetic designs. I know this isn't a masterpiece by any means, but I have spent 25-30 hours and am really proud of what I've been able to put together
-- The Contact page is intentionally light on content, and it follows that Semantic HTML elements are fewer. 
-     - This is to reduce the workload on the user. By visiting this page, a user has already indicated interest in contacting me about my services. 
-     - I don't want them to sort through even more content before being able to contact me (currently a link to my email, maybe a form in a future week), so by keeping the page to the bare minimum, I'm keeping the funnel wide
-- Ideas for future weeks
-     - Make a form on the contact page?
-     - Convert the 'Contact' option on the nav and throughout page content to be buttons?
-     - Instead of a static safety stock example on sample page, use forms and JavaScript to allow user to enter their own inputs and return the calculation?
-     - Project examples on 'Projects' page collapsible boxes + reorganization?
+### Objectives Met
 
-### How I Went Above and Beyond
-- Maintained last week's above + beyond
-- Exceeded the requirement of each element having at least one style impacting it; most have several
-- Exceeded the 3-layout requirement:
-    - Screen width <= 640px
-    - Screen width 640 to 900px
-    - Screen width >= 900px
-    - Print layout
-- For each screen width layout, I adjusted many things to create a distinct look for each dimension:
-    - nav padding
-    - figure width + whether or not to display
-    - swapping a table for a list on mobile widths
-    - underlines on headings in mobile view for some visual differences
-    - padding around main
-    - font size of various elements:
-        - h1
-        - h2
-        - h3
-        - nav text
-    - visiblity of iframe (YouTube video)
-- For print layout, I adjusted several things to create a look for printing
-    - margins
-    - colored section backgrounds
-    - I tried to strip out things that wouldn't make sense on a printed page, as the use case for printing is more informative:
-        - nav
-        - iframe (youtube video)
-        - calls to action ("Contact me now!")
-# test
+#### Design
+- I really struggle with visual aesthetics, and am really proud of what I was able to accomplish
+- Coolers helped me select colors
+- Took presentation feedback
+
+#### Layout
+- Tested on desktop browsers of various widths + mobile
+- Used media queries + flexbox to help achieve responsive design
+- Used DOM manipulation to show/hide cumbersome elements on smaller screens (photos + show a list instead of a table)
+
+#### Text
+- My website tells a story geared towrads the intended audience (small business owners in need of help with supply chain problems)
+- On the home page, I used a marketing framework (the storybrand framework) to walk the visiter through their needs and present myself as the solution to their problems
+- The other pages are all relevant to the intended visitor's needs, giving them:
+    - an intro to who I am
+    - projects I've worked on and the imact I've made
+    - a work sample
+    - supply chain/business analytics resources
+    - a way to contact me
+
+#### Images
+- All images have specified alt text and width/height, images are responsive as page size changes
+- Credit is given (most images sources from unsplash)
+
+#### Mechanics
+- Links work, and each page is accessible from each other page except the form submission confirmation page
+- Tested in Chrome, Firefox, and Safari
+
+#### HTML
+- Semantic elements used throughout the site
+- Most pages have 5-7 elements, and the ones that don't are intentional. For example, the contact page should have a low barrier to entry. Every click/paragraph is a heavier lift and the user journey is a funnel. If someone's already on that page they already want to contact me, make it simple!
+
+#### CSS
+- CSS used throughout the site. The main elements I templated are grey and blue blocks, that are used throughout, with slight variations based on particular need
+- Media queries to help adapt to various screen sizes & print scenario
+- Flexbox to help with responsivity & alignment
+
+#### Javascript
+- Contact buttons on site use JavaScript to take user to the contact page
+- Safety Stock Calculator uses javascript & Javascript Math methods to calculate safety stock based on user inputs
+- DOM manipulation based on safety stock results
+- Javascript to help get resources from JSON file (used fetch)
+
+#### Vue
+- Resources page: Vue helps show/hide the 'access article here' link on hover
+
+#### Dom Manipulation
+- Safety Stock Calculator result populated into DOM
+- Resources page: data populated by changing DOM after Fetch
+- Resources page: Vue show/hide 'access article here' link
+- Home page: hide/show table/list
+
+#### Validation/Accessiblity
+- Enabled a noscript element to let user know that site works best with JavaScript enabled
+- Validated HTML, CSS, & JavaScript
+- Alt text, labels, etc. used with accessiblity in mind
+
+#### Extra Credit
+- Fetch used to get data from JSON
+- Map used in Safety Stock Calculator to help map service levels to z-scores
+- FlexBox used to help with repsonsive design
+
+### Final Thoughts
+I'm really proud of what I've accomplished because this is my first exposure to web development, can't make things look nice to save my life, and can tell I've come a long way since the beginning of the course.
+
+I know my limitations, I'm a data person. So if I do end up wanting to do some consulting work and use this site I'll definitely hire a designer to make the site look nicer, and while I enjoy writing I'm not great at writing for SEO, so while I like what the content says I'd probably hire a SEO specialist to go over and edit to make it more optimized for search discovery.
