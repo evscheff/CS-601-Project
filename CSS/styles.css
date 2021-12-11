@@ -71,6 +71,10 @@ main {
     width: 42.5%;
 }
 
+#WhoGivesThemPlan {
+    padding: 0px 60px 0px 60px;
+}
+
 /* Main Templates for Standard Blocks */
 .GreyBlock {
         border: 1px solid black;
