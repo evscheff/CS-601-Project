@@ -21,11 +21,11 @@ h3 {
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 form {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 body {
@@ -68,7 +68,7 @@ main {
 }
 
 #HeroWithProblem, #MeetsGuide {
-    width: 45%;
+    width: 42.5%;
 }
 
 /* Main Templates for Standard Blocks */
