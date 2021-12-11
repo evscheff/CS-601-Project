@@ -66,16 +66,16 @@ main {
 .GreyBlock {
         border: 1px solid black;
         border-radius: 15px;
-        padding: 0px 15px 0px 15px;
-        margin: 30px 0px 30px 0px;
+        padding: 0px 30px 0px 30px;
+        margin: 15px 0px 15px 0px;
         background-color: #eeeeee;
 }
 
 .BlueBlock {
         border: 1px solid black;
         border-radius: 15px;
-        padding: 0px 15px 0px 15px;
-        margin: 30px 0px 30px 0px;
+        padding: 0px 30px 0px 30px;
+        margin: 15px 0px 15px 0px;
         background-color: #023047;
         color: white;
         font-weight: lighter;
