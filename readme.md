@@ -11,6 +11,7 @@ My website is the start of a site that's all about consulting services I can off
 - Enjoy the site!
 
 ### Feedback from Presentation Implemented
+- I tried incorporating the sticky footer (contact page) the professor mentioned during my presentation, but could not get it to work
 - Increased font size and padding on screen
 - Changed the color of the nav & footer
 - Borders rounded to a lesser extent
