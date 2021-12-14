@@ -74,7 +74,7 @@ My website is the start of a site that's all about consulting services I can off
 
 #### Validation/Accessiblity
 - Enabled a noscript element to let user know that site works best with JavaScript enabled
-- Validated HTML, CSS, & JavaScript
+- Validated HTML, CSS, & JavaScript successfully immediately before submission
 - Alt text, labels, etc. used with accessiblity in mind
 
 #### Extra Credit
